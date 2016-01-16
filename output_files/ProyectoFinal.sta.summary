@@ -1,0 +1,149 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clock'
+Slack : -2.700
+TNS   : -68.916
+
+Type  : Slow 1200mV 85C Model Setup 'Retraso1Hz:inst7|auxiliar'
+Slack : -2.621
+TNS   : -9.291
+
+Type  : Slow 1200mV 85C Model Setup 'col1'
+Slack : -0.756
+TNS   : -3.024
+
+Type  : Slow 1200mV 85C Model Setup 'TecladoMat:inst2|reloj_aux'
+Slack : -0.104
+TNS   : -0.104
+
+Type  : Slow 1200mV 85C Model Hold 'col1'
+Slack : -0.536
+TNS   : -1.781
+
+Type  : Slow 1200mV 85C Model Hold 'clock'
+Slack : -0.104
+TNS   : -0.186
+
+Type  : Slow 1200mV 85C Model Hold 'Retraso1Hz:inst7|auxiliar'
+Slack : 0.344
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'TecladoMat:inst2|reloj_aux'
+Slack : 0.415
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock'
+Slack : -3.000
+TNS   : -49.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'col1'
+Slack : -3.000
+TNS   : -7.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Retraso1Hz:inst7|auxiliar'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'TecladoMat:inst2|reloj_aux'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Slow 1200mV 0C Model Setup 'Retraso1Hz:inst7|auxiliar'
+Slack : -2.322
+TNS   : -8.196
+
+Type  : Slow 1200mV 0C Model Setup 'clock'
+Slack : -2.300
+TNS   : -56.286
+
+Type  : Slow 1200mV 0C Model Setup 'col1'
+Slack : -0.523
+TNS   : -2.092
+
+Type  : Slow 1200mV 0C Model Setup 'TecladoMat:inst2|reloj_aux'
+Slack : 0.013
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'col1'
+Slack : -0.532
+TNS   : -1.671
+
+Type  : Slow 1200mV 0C Model Hold 'clock'
+Slack : -0.079
+TNS   : -0.145
+
+Type  : Slow 1200mV 0C Model Hold 'Retraso1Hz:inst7|auxiliar'
+Slack : 0.300
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'TecladoMat:inst2|reloj_aux'
+Slack : 0.371
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock'
+Slack : -3.000
+TNS   : -49.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'col1'
+Slack : -3.000
+TNS   : -7.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Retraso1Hz:inst7|auxiliar'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'TecladoMat:inst2|reloj_aux'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Fast 1200mV 0C Model Setup 'clock'
+Slack : -1.121
+TNS   : -21.218
+
+Type  : Fast 1200mV 0C Model Setup 'Retraso1Hz:inst7|auxiliar'
+Slack : -0.941
+TNS   : -3.129
+
+Type  : Fast 1200mV 0C Model Setup 'col1'
+Slack : -0.247
+TNS   : -0.988
+
+Type  : Fast 1200mV 0C Model Setup 'TecladoMat:inst2|reloj_aux'
+Slack : 0.390
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'col1'
+Slack : -0.399
+TNS   : -1.412
+
+Type  : Fast 1200mV 0C Model Hold 'clock'
+Slack : -0.117
+TNS   : -0.222
+
+Type  : Fast 1200mV 0C Model Hold 'Retraso1Hz:inst7|auxiliar'
+Slack : 0.179
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'TecladoMat:inst2|reloj_aux'
+Slack : 0.219
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock'
+Slack : -3.000
+TNS   : -51.519
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'col1'
+Slack : -3.000
+TNS   : -7.644
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Retraso1Hz:inst7|auxiliar'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'TecladoMat:inst2|reloj_aux'
+Slack : -1.000
+TNS   : -4.000
+
+------------------------------------------------------------

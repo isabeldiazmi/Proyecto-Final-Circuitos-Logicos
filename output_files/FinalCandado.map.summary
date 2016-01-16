@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Dec 03 13:30:19 2015
+Quartus II 64-Bit Version : 12.1 Build 177 11/07/2012 SJ Web Edition
+Revision Name : FinalCandado
+Top-level Entity Name : FinalCandado
+Family : Cyclone IV E
+Total logic elements : 56
+    Total combinational functions : 56
+    Dedicated logic registers : 26
+Total registers : 26
+Total pins : 14
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

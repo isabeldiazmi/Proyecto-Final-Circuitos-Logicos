@@ -1,0 +1,196 @@
+|ProyectoFinal
+ren1 <= TecladoMat:inst2.F1
+clock => TecladoMat:inst2.clk
+clock => Retraso1Hz:inst7.CLK_IN
+col1 => TecladoMat:inst2.C1
+col2 => TecladoMat:inst2.C2
+col3 => TecladoMat:inst2.C3
+col4 => TecladoMat:inst2.C4
+ren2 <= TecladoMat:inst2.F2
+ren3 <= TecladoMat:inst2.F3
+ren4 <= TecladoMat:inst2.F4
+A <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+RESET => Retraso1Hz:inst7.RESET
+B <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+C <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+D <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+E <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+F <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+G <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+piso[0] <= num[0].DB_MAX_OUTPUT_PORT_TYPE
+piso[1] <= num[1].DB_MAX_OUTPUT_PORT_TYPE
+piso[2] <= num[2].DB_MAX_OUTPUT_PORT_TYPE
+piso[3] <= num[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ProyectoFinal|TecladoMat:inst2
+clk => contador[0].CLK
+clk => contador[1].CLK
+clk => contador[2].CLK
+clk => contador[3].CLK
+clk => contador[4].CLK
+clk => contador[5].CLK
+clk => contador[6].CLK
+clk => contador[7].CLK
+clk => contador[8].CLK
+clk => contador[9].CLK
+clk => contador[10].CLK
+clk => contador[11].CLK
+clk => contador[12].CLK
+clk => contador[13].CLK
+clk => contador[14].CLK
+clk => contador[15].CLK
+clk => contador[16].CLK
+clk => contador[17].CLK
+clk => contador[18].CLK
+clk => reloj_aux.CLK
+C1 => salidas.OUTPUTSELECT
+C1 => T.OUTPUTSELECT
+C1 => salidas.OUTPUTSELECT
+C1 => salidas.OUTPUTSELECT
+C1 => salidas.OUTPUTSELECT
+C1 => salidas.OUTPUTSELECT
+C1 => salidas.OUTPUTSELECT
+C1 => salidas.OUTPUTSELECT
+C1 => salidas.OUTPUTSELECT
+C1 => Selector2.IN3
+C2 => salidas.OUTPUTSELECT
+C2 => T.OUTPUTSELECT
+C2 => salidas.OUTPUTSELECT
+C2 => salidas.OUTPUTSELECT
+C2 => salidas.OUTPUTSELECT
+C2 => salidas.OUTPUTSELECT
+C3 => salidas.OUTPUTSELECT
+C3 => T.OUTPUTSELECT
+C3 => salidas.DATAA
+C3 => salidas.DATAA
+C4 => salidas.DATAA
+C4 => T.DATAA
+F1 <= F1.DB_MAX_OUTPUT_PORT_TYPE
+F2 <= F2.DB_MAX_OUTPUT_PORT_TYPE
+F3 <= F3.DB_MAX_OUTPUT_PORT_TYPE
+F4 <= F4.DB_MAX_OUTPUT_PORT_TYPE
+T <= T.DB_MAX_OUTPUT_PORT_TYPE
+salidas[0] <= Selector3.DB_MAX_OUTPUT_PORT_TYPE
+salidas[1] <= Selector2.DB_MAX_OUTPUT_PORT_TYPE
+salidas[2] <= Selector1.DB_MAX_OUTPUT_PORT_TYPE
+salidas[3] <= Selector0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ProyectoFinal|7449:inst9
+OG <= 33.DB_MAX_OUTPUT_PORT_TYPE
+C => 9.IN0
+BIN => 13.IN1
+BIN => 12.IN1
+BIN => 11.IN1
+BIN => 14.IN1
+B => 8.IN0
+A => 7.IN0
+D => 10.IN0
+OF <= 37.DB_MAX_OUTPUT_PORT_TYPE
+OE <= 32.DB_MAX_OUTPUT_PORT_TYPE
+OD <= 36.DB_MAX_OUTPUT_PORT_TYPE
+OC <= 31.DB_MAX_OUTPUT_PORT_TYPE
+OB <= 35.DB_MAX_OUTPUT_PORT_TYPE
+OA <= 34.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ProyectoFinal|Elevador:inst
+teclado[0] => Equal0.IN7
+teclado[0] => Equal1.IN7
+teclado[0] => Equal2.IN7
+teclado[0] => Equal3.IN7
+teclado[1] => Equal0.IN6
+teclado[1] => Equal1.IN6
+teclado[1] => Equal2.IN6
+teclado[1] => Equal3.IN6
+teclado[2] => Equal0.IN5
+teclado[2] => Equal1.IN5
+teclado[2] => Equal2.IN5
+teclado[2] => Equal3.IN5
+teclado[3] => Equal0.IN4
+teclado[3] => Equal1.IN4
+teclado[3] => Equal2.IN4
+teclado[3] => Equal3.IN4
+clk => estadoActual~1.DATAIN
+piso[0] <= Selector2.DB_MAX_OUTPUT_PORT_TYPE
+piso[1] <= Selector1.DB_MAX_OUTPUT_PORT_TYPE
+piso[2] <= Selector0.DB_MAX_OUTPUT_PORT_TYPE
+piso[3] <= <GND>
+
+
+|ProyectoFinal|Retraso1Hz:inst7
+CLK_IN => contador[0].CLK
+CLK_IN => contador[1].CLK
+CLK_IN => contador[2].CLK
+CLK_IN => contador[3].CLK
+CLK_IN => contador[4].CLK
+CLK_IN => contador[5].CLK
+CLK_IN => contador[6].CLK
+CLK_IN => contador[7].CLK
+CLK_IN => contador[8].CLK
+CLK_IN => contador[9].CLK
+CLK_IN => contador[10].CLK
+CLK_IN => contador[11].CLK
+CLK_IN => contador[12].CLK
+CLK_IN => contador[13].CLK
+CLK_IN => contador[14].CLK
+CLK_IN => contador[15].CLK
+CLK_IN => contador[16].CLK
+CLK_IN => contador[17].CLK
+CLK_IN => contador[18].CLK
+CLK_IN => contador[19].CLK
+CLK_IN => contador[20].CLK
+CLK_IN => contador[21].CLK
+CLK_IN => contador[22].CLK
+CLK_IN => contador[23].CLK
+CLK_IN => contador[24].CLK
+CLK_IN => auxiliar.CLK
+RESET => contador[0].ACLR
+RESET => contador[1].ACLR
+RESET => contador[2].ACLR
+RESET => contador[3].ACLR
+RESET => contador[4].ACLR
+RESET => contador[5].ACLR
+RESET => contador[6].ACLR
+RESET => contador[7].ACLR
+RESET => contador[8].ACLR
+RESET => contador[9].ACLR
+RESET => contador[10].ACLR
+RESET => contador[11].ACLR
+RESET => contador[12].ACLR
+RESET => contador[13].ACLR
+RESET => contador[14].ACLR
+RESET => contador[15].ACLR
+RESET => contador[16].ACLR
+RESET => contador[17].ACLR
+RESET => contador[18].ACLR
+RESET => contador[19].ACLR
+RESET => contador[20].ACLR
+RESET => contador[21].ACLR
+RESET => contador[22].ACLR
+RESET => contador[23].ACLR
+RESET => contador[24].ACLR
+RESET => auxiliar.ACLR
+CLK_OUT <= auxiliar.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ProyectoFinal|dFF4Bits:inst3
+D[0] => Equal0.IN7
+D[0] => aux[0].DATAIN
+D[1] => Equal0.IN6
+D[1] => aux[1].DATAIN
+D[2] => Equal0.IN5
+D[2] => aux[2].DATAIN
+D[3] => Equal0.IN4
+D[3] => aux[3].DATAIN
+clk_In => aux[0].CLK
+clk_In => aux[1].CLK
+clk_In => aux[2].CLK
+clk_In => aux[3].CLK
+Q[0] <= aux[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= aux[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= aux[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= aux[3].DB_MAX_OUTPUT_PORT_TYPE
+
+

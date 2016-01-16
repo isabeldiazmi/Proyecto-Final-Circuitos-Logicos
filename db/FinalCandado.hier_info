@@ -1,0 +1,88 @@
+|FinalCandado
+ABCD[0] <= Teclado:inst.ABCD[0]
+ABCD[1] <= Teclado:inst.ABCD[1]
+ABCD[2] <= Teclado:inst.ABCD[2]
+ABCD[3] <= Teclado:inst.ABCD[3]
+CLK_IN => CLK60hz:inst2.CLK_IN
+RESET => inst3.IN0
+EFGH[0] => Teclado:inst.EFGH[0]
+EFGH[1] => Teclado:inst.EFGH[1]
+EFGH[2] => Teclado:inst.EFGH[2]
+EFGH[3] => Teclado:inst.EFGH[3]
+selector[0] <= Teclado:inst.selector[0]
+selector[1] <= Teclado:inst.selector[1]
+selector[2] <= Teclado:inst.selector[2]
+selector[3] <= Teclado:inst.selector[3]
+
+
+|FinalCandado|Teclado:inst
+CLK_IN => contador60[0].CLK
+CLK_IN => contador60[1].CLK
+CLK_IN => contador60[2].CLK
+CLK_IN => contador60[3].CLK
+CLK_IN => contador60[4].CLK
+CLK_IN => contador60[5].CLK
+RESET => contador60[0].ACLR
+RESET => contador60[1].ACLR
+RESET => contador60[2].ACLR
+RESET => contador60[3].ACLR
+RESET => contador60[4].ACLR
+RESET => contador60[5].ACLR
+EFGH[0] => ~NO_FANOUT~
+EFGH[1] => ~NO_FANOUT~
+EFGH[2] => ~NO_FANOUT~
+EFGH[3] => ~NO_FANOUT~
+ABCD[0] <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
+ABCD[1] <= ABCD.DB_MAX_OUTPUT_PORT_TYPE
+ABCD[2] <= ABCD.DB_MAX_OUTPUT_PORT_TYPE
+ABCD[3] <= ABCD.DB_MAX_OUTPUT_PORT_TYPE
+selector[0] <= selector[0].DB_MAX_OUTPUT_PORT_TYPE
+selector[1] <= selector[1].DB_MAX_OUTPUT_PORT_TYPE
+selector[2] <= selector[2].DB_MAX_OUTPUT_PORT_TYPE
+selector[3] <= selector[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FinalCandado|CLK60hz:inst2
+CLK_IN => contador[0].CLK
+CLK_IN => contador[1].CLK
+CLK_IN => contador[2].CLK
+CLK_IN => contador[3].CLK
+CLK_IN => contador[4].CLK
+CLK_IN => contador[5].CLK
+CLK_IN => contador[6].CLK
+CLK_IN => contador[7].CLK
+CLK_IN => contador[8].CLK
+CLK_IN => contador[9].CLK
+CLK_IN => contador[10].CLK
+CLK_IN => contador[11].CLK
+CLK_IN => contador[12].CLK
+CLK_IN => contador[13].CLK
+CLK_IN => contador[14].CLK
+CLK_IN => contador[15].CLK
+CLK_IN => contador[16].CLK
+CLK_IN => contador[17].CLK
+CLK_IN => contador[18].CLK
+CLK_IN => auxiliar.CLK
+RESET => contador[0].ACLR
+RESET => contador[1].ACLR
+RESET => contador[2].ACLR
+RESET => contador[3].ACLR
+RESET => contador[4].ACLR
+RESET => contador[5].ACLR
+RESET => contador[6].ACLR
+RESET => contador[7].ACLR
+RESET => contador[8].ACLR
+RESET => contador[9].ACLR
+RESET => contador[10].ACLR
+RESET => contador[11].ACLR
+RESET => contador[12].ACLR
+RESET => contador[13].ACLR
+RESET => contador[14].ACLR
+RESET => contador[15].ACLR
+RESET => contador[16].ACLR
+RESET => contador[17].ACLR
+RESET => contador[18].ACLR
+RESET => auxiliar.ACLR
+CLK_OUT <= auxiliar.DB_MAX_OUTPUT_PORT_TYPE
+
+

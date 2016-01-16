@@ -1,0 +1,158 @@
+-- Incorporamos las librerias
+library IEEE;
+use IEEE.std_logic_1164.ALL;
+
+--Entidad
+entity TecladoMat is 
+	PORT (clk : in STD_LOGIC;
+			C1 : in STD_LOGIC;
+			C2 : in STD_LOGIC;
+			C3 : in STD_LOGIC;
+			C4 : in STD_LOGIC;
+			
+			F1 : out Std_LOGIC;
+			F2 : out Std_LOGIC;
+			F3 : out Std_LOGIC;
+			F4 : out Std_LOGIC;
+			
+			T : out std_LOGIC;
+			
+			salidas: out STD_LOGIC_VECTOR(3 downto 0));
+end TecladoMat;
+
+architecture Behavioral of TecladoMat is
+	type estados_contador is(S0,S1,S2,S3);
+	signal estado_Actual, estado_Siguiente :estados_contador;
+   signal contador: integer range 0 to 500000 := 0;
+	signal reloj_aux: std_LOGIC;
+
+begin
+	Divisor_frecuencia: process (clk) begin     -- Lista de sensitividad
+        if rising_edge(clk) then
+            if (contador = 50000) then
+                reloj_aux <= NOT(reloj_aux);
+                contador <= 0;
+            else
+                contador <= contador+1;
+            end if;
+        end if;
+    end process;
+
+	Proc_Sec_Contador: process(reloj_aux)
+	begin
+		
+		if rising_edge(reloj_aux) then
+			estado_Actual <= estado_Siguiente;
+		end if;
+	end process;
+	
+	
+	Proc_Comb_Contador: process(Estado_Actual)
+		begin
+			case Estado_Actual is
+				when S0 =>
+					F1 <= '1';
+					F2 <= '0';
+					F3 <= '0';
+					F4 <= '0';
+					Estado_Siguiente <= S1;
+				when S1 =>
+					F1 <= '0';
+					F2 <= '1';
+					F3 <= '0';
+					F4 <= '0';
+					Estado_Siguiente <= S2;
+				when S2 =>
+					F1 <= '0';
+					F2 <= '0';
+					F3 <= '1';
+					F4 <= '0';
+					Estado_Siguiente <= S3;
+				when S3 =>
+					F1 <= '0';
+					F2 <= '0';
+					F3 <= '0';
+					F4 <= '1';
+					Estado_Siguiente <= S0;
+			end case;
+		end process;
+		
+		Proc_Comb_Salidas: process(Estado_Actual)
+		begin
+			
+			
+			
+			case Estado_Actual is
+				when S0 =>
+					if(C1  = '1' ) then
+						Salidas <= "0001"; --1
+						T <= '1';
+					elsif(C2  = '1' ) then
+						Salidas <= "0010"; -- 2
+						T <= '1';
+					elsif(C3  = '1' ) then
+						Salidas <= "0011"; -- 3
+						T <= '1';
+					elsif(C4  = '1' ) then
+						Salidas <= "1010"; --10,A
+						T <= '1';
+					else
+						Salidas <= "0000";
+						T <= '0';
+					end if;
+					
+				when S1 =>
+					if(C1  = '1') then
+						Salidas <= "0100"; -- 4
+						T <= '1';
+					elsif(C2  = '1') then
+						Salidas <= "0101"; -- 5
+						T <= '1';
+					elsif(C3  = '1') then
+						Salidas <= "0110"; -- 6
+						T <= '1';
+					elsif(C4  = '1') then
+						Salidas <= "1011"; -- 11,B
+						T <= '1';
+					else
+						Salidas <= "0000";
+						T <= '0';
+					end if;
+				when S2 =>
+					if(C1  = '1') then
+						Salidas <= "0111"; --7
+						T <= '1';
+					elsif(C2  = '1') then
+						Salidas <= "1000"; --8
+						T <= '1';
+					elsif(C3  = '1') then
+						Salidas <= "1001"; --9
+						T <= '1';
+					elsif(C4  = '1') then
+						Salidas <= "1100";--12,C
+						T <= '1';
+					else 
+						Salidas <= "0000";
+						T <= '0';
+					end if;
+				when S3 =>
+					if(C1  = '1') then
+						Salidas <= "1110"; --14,asterisco
+						T <= '1';
+					elsif(C2  = '1') then
+						Salidas <= "0000"; --0
+						T <= '1';
+					elsif(C3  = '1') then
+						Salidas <= "1111"; --15,gato
+						T <= '1';
+					elsif(C4  = '1') then
+						Salidas <= "1101";--13,D
+						T <= '1';
+					else	
+						Salidas <= "0000";
+						T <= '0';
+					end if;
+				
+			end case;
+		end process;
+	end architecture;
